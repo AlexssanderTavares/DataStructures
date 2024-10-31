@@ -29,10 +29,16 @@ class FirstExerciseProgram {
             }
         }
 
-        if(!stack.isEmpty()){
-            for(i: Int in 0..stack.length() - 1){
-                println(stack.getTop())
-            }
+        //My algorithm
+        /* if(!stack.isEmpty()){
+             for(i: Int in 0..stack.length() - 1){
+                 println(stack.getTop())
+             }
+         }*/
+
+        //Correction
+        while(!stack.isEmpty()){
+            println("Unstacking: ${stack.getTop()}")
         }
     }
 }

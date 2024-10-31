@@ -37,7 +37,8 @@ public class FirstExerciseProgram {
         }
         i = 0;
 
-        if(!stack.isEmpty()){
+        //My algorithm
+        /*if(!stack.isEmpty()){
             for(int x = 0; x <= stack.length() - 1; x++) {
                 try {
                     String element = stack.getTop().toString();
@@ -46,6 +47,16 @@ public class FirstExerciseProgram {
                     System.out.println("There is no element inside the stack!");
                 }
 
+            }
+        }*/
+
+        //Correction
+        while(!stack.isEmpty()){
+            try {
+                String element = stack.getTop().toString();
+                System.out.println(element);
+            }catch (NoElementStackedException exception){
+                System.out.println("There is no element inside the stack!");
             }
         }
     }

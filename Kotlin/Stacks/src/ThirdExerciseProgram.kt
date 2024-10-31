@@ -6,7 +6,7 @@ class ThirdExerciseProgram {
         var counter: Int = 0
 
         while (counter < midRange) {
-            if (word[counter] == word[high]) {
+            if (word[counter].lowercase().trim() == word[high].lowercase().trim()) {
                 counter++
                 high--
             } else {

@@ -9,7 +9,7 @@ public class ThirdExerciseProgram {
         int high;
 
         if (word != null) {
-            subject = word.toCharArray();
+            subject = word.toLowerCase().toCharArray();
             midRange = word.length() / 2;
             high = word.length() - 1;
         } else {
