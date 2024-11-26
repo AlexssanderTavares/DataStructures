@@ -39,7 +39,11 @@ public class Queue<T> {
     }
 
     public void showNext() {
-        System.out.println(this.queue[0]);
+        if(this.isEmpty()){
+            System.out.println("Queue is empty");
+        }
+
+        System.out.println("Next value: " + this.queue[0]);
     }
 
     public void add(T item) {
@@ -60,6 +64,7 @@ public class Queue<T> {
         for (int i = 0; i <= this.length - 1; i++) {
             this.queue[i] = this.queue[i + 1];
         }
+        this.length--;
         return getElement;
     }
 

@@ -1,7 +1,7 @@
 import com.sun.org.apache.xpath.internal.operations.Bool
 import java.util.Arrays
 
-class Queue<T>(private var capacity: Int) {
+open class Queue<T>(private var capacity: Int) {
 
     constructor() : this(10)
 
@@ -32,6 +32,10 @@ class Queue<T>(private var capacity: Int) {
     }
 
     fun showNext() {
+        if(this.isEmpty()){
+            println("Queue is empty")
+        }
+
         println("Next value: ${this.queue[0]}")
     }
 
@@ -54,6 +58,7 @@ class Queue<T>(private var capacity: Int) {
         for (i: Int in 0..this.length - 1) {
             this.queue[i] = this.queue[i + 1]
         }
+        this.length--
         return getElement
     }
 
